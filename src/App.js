@@ -1,8 +1,10 @@
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
+import Results from "./Results/Results";
 import SearchForm from "./SearchForm/SearchForm";
 
 function App() {
-  const [searchParameter, setSearchParameter] = useState("");
+  const [searchParameter, setSearchParameter] = useState("batman");
 
   // handle the inputs entered by the users
   const handleOnSubmit = (e, input, setInput) => {
@@ -14,9 +16,14 @@ function App() {
   };
 
   return (
-    <>
-      <SearchForm handleOnSubmit={handleOnSubmit} />
-    </>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <SearchForm handleOnSubmit={handleOnSubmit} />
+          <Results searchParameter={searchParameter} />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
