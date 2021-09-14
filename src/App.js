@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import SearchForm from "./SearchForm/SearchForm";
 
 function App() {
+  const [searchParameter, setSearchParameter] = useState("");
+
+  // handle the inputs entered by the users
+  const handleOnSubmit = (e, input, setInput) => {
+    e.preventDefault();
+    setSearchParameter(input);
+
+    // Clear the search form input
+    setInput("");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SearchForm handleOnSubmit={handleOnSubmit} />
+    </>
   );
 }
 
