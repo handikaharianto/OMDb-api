@@ -14,3 +14,7 @@
 ## API that I used:
 
 [OMDb API](http://www.omdbapi.com/)
+
+
+## Preview:
+![Movie Search Preview](https://github.com/handikaharianto/OMDb-api/blob/main/public/preview_omdb-api.png?raw=true "Preview")
