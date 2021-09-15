@@ -1,0 +1,9 @@
+.section-loading {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.loading-text {
+  margin: 2em 0;
+}

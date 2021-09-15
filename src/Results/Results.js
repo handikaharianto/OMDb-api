@@ -5,7 +5,7 @@ import SuccessResult from "./SuccessResult";
 
 const Results = ({ searchParameter }) => {
   const { data, loading } = useFetch(
-    `https://www.omdbapi.com/?s=${searchParameter}&apikey=d33ca8b`
+    `https://www.omdbapi.com/?s=${searchParameter}&apikey=${process.env.REACT_APP_API_KEY}`
   );
 
   if (loading) {
