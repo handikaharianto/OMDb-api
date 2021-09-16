@@ -5,7 +5,7 @@ import SuccessResult from "./SuccessResult";
 
 const Results = ({ searchParameter }) => {
   const { data, loading } = useFetch(
-    `https://www.omdbapi.com/?s=${searchParameter}&apikey=${process.env.REACT_APP_API_KEY}`
+    `https://www.omdbapi.com/?s=${searchParameter}&apikey=d33ca8b` // Did try to use .env file but doesn't work after deployment.
   );
 
   if (loading) {

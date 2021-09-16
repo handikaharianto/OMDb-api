@@ -7,7 +7,7 @@ const SingleMovie = () => {
   const { id } = useParams();
 
   const { data, loading } = useFetch(
-    `https://www.omdbapi.com/?i=${id}&apikey=${process.env.REACT_APP_API_KEY}`
+    `https://www.omdbapi.com/?i=${id}&apikey=d33ca8b` // Should've used .env file but it didn't work out
   );
 
   if (loading) {
