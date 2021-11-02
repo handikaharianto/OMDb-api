@@ -1,4 +1,6 @@
-# OMDb API - Movie Search
+# [OMDb API - Movie Search](https://movie-search-omdb-api.netlify.app)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2e09841d-d968-41d3-b43c-2ee10a5a779d/deploy-status)](https://app.netlify.com/sites/movie-search-omdb-api/deploys)
 
 ## Tech Used:
 
@@ -18,3 +20,4 @@
 
 ## Preview:
 ![Movie Search Preview](https://github.com/handikaharianto/OMDb-api/blob/main/public/preview_omdb-api.png?raw=true "Preview")
+
