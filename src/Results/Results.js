@@ -1,23 +1,24 @@
-import Loading from "../Loading/Loading";
+import Message from "../Message/Message";
 import useFetch from "../useFetch";
-import ErrorResult from "./ErrorResult";
 import SuccessResult from "./SuccessResult";
 
 const Results = ({ searchParameter }) => {
-  const { data, loading } = useFetch(
+  const {
+    data: { Search: results },
+    loading,
+    error,
+  } = useFetch(
     `https://www.omdbapi.com/?s=${searchParameter}&apikey=d33ca8b` // Did try to use .env file but doesn't work after deployment.
   );
 
-  if (loading) {
-    return <Loading />;
-  }
-
   return (
     <section className="section-results">
-      {data.Response === "True" ? (
-        <SuccessResult results={data.Search} />
+      {loading ? (
+        <Message message="Loading..." />
+      ) : error ? (
+        <Message message={error} />
       ) : (
-        <ErrorResult />
+        <SuccessResult results={results} />
       )}
     </section>
   );

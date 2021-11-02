@@ -4,6 +4,6 @@
   min-height: 100vh;
 }
 
-.loading-text {
-  margin: 2em 0;
+.message {
+  font-size: 3rem;
 }

@@ -7,20 +7,11 @@ import SingleMovie from "./SingleMovie/SingleMovie";
 function App() {
   const [searchParameter, setSearchParameter] = useState("batman");
 
-  // handle the inputs entered by the users
-  const handleOnSubmit = (e, input, setInput) => {
-    e.preventDefault();
-    setSearchParameter(input);
-
-    // Clear the search form input
-    setInput("");
-  };
-
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <SearchForm handleOnSubmit={handleOnSubmit} />
+          <SearchForm setSearchParameter={setSearchParameter} />
           <Results searchParameter={searchParameter} />
         </Route>
         <Route path="/movie/:id">

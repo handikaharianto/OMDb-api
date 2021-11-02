@@ -1,19 +1,19 @@
 import { Link, useParams } from "react-router-dom";
+import Message from "../Message/Message";
 import useFetch from "../useFetch";
-import Loading from "../Loading/Loading";
 import "./SingleMovie.css";
 
 const SingleMovie = () => {
   const { id } = useParams();
 
   const { data, loading } = useFetch(
-    `https://www.omdbapi.com/?i=${id}&apikey=d33ca8b` // Should've used .env file but it didn't work out
+    `https://www.omdbapi.com/?i=${id}&apikey=d33ca8b`
   );
 
   if (loading) {
     return (
       <section className="section-loading">
-        <Loading />
+        <Message message="Loading..." />
       </section>
     );
   }
