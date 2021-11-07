@@ -1,56 +1,120 @@
-.bold-text {
-  font-weight: 700;
-}
-
-.back-btn {
-  margin: 3em 0;
-  text-align: center;
-}
-
-.back-btn__link {
-  padding: 0.3em 1.5em;
-  border-radius: 5px;
-  color: white;
-  background-color: black;
-}
-
-.movie-content {
+.movie {
   display: grid;
-  align-items: center;
-  gap: 1.5em;
-}
-
-.movie-content__poster {
-  text-align: center;
-}
-
-.movie-content__poster img {
-  max-width: 100%;
-  height: 350px;
-  object-fit: contain;
-}
-
-.movie-content__info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2em 0;
-}
-
-.movie-content__director {
-  margin-bottom: 0.5em;
-}
-
-.movie-content__plot {
-  margin: 1em 0;
+  gap: 2em 0;
+  max-width: 1200px;
+  margin: 4em auto;
 }
 
 @media (min-width: 768px) {
-  .movie-content {
+  .movie {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .movie-content__poster img {
-    height: 420px;
-  }
+.movie__img-container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.movie__img {
+  display: block;
+  border-radius: 10px;
+}
+
+.movie__back-btn {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 2.7rem;
+  padding: 0.5em;
+  border-radius: 10px;
+  margin-top: 1em;
+  color: var(--clr-white);
+  background-color: var(--clr-orange);
+  font-size: 0.75rem;
+}
+
+.movie-right {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.movie__title {
+  font-family: var(--ff-secondary);
+  letter-spacing: 0.05em;
+}
+
+.movie__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1em;
+  margin-top: 0.7em;
+}
+
+.movie__info li {
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
+  background-color: var(--clr-cream-2);
+  font-size: 0.7rem;
+}
+
+.movie__rating {
+  display: flex;
+  gap: 1em;
+  margin-top: 0.7em;
+}
+
+.movie__imdb {
+  width: 55px;
+  border-radius: 10px;
+}
+
+.movie__rating h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.movie__rating sub {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.movie__overview {
+  margin-top: 0.7em;
+}
+
+.movie__overview h5,
+.movie__writer h5,
+.movie__actor h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.movie__plot {
+  font-size: 0.8rem;
+}
+
+.movie__writer,
+.movie__actor {
+  border-top: 2px solid var(--clr-cream-2);
+  margin-top: 2em;
+}
+
+.movie__writer ul,
+.movie__actor ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+
+.movie__writer li,
+.movie__actor li {
+  text-align: center;
+}
+
+.movie__writer h6,
+.movie__actor h6 {
+  font-size: 0.8rem;
+  font-weight: 400;
 }

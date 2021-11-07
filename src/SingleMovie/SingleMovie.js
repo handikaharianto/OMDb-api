@@ -18,37 +18,77 @@ const SingleMovie = () => {
     );
   }
 
-  const { Title, Released, Genre, Director, Actors, Poster, Plot } = data;
+  const {
+    Title,
+    Released,
+    Genre,
+    Actors,
+    Poster,
+    Plot,
+    Runtime,
+    Rated,
+    imdbRating,
+    Writer,
+  } = data;
   return (
-    <section className="section-movie">
-      <div className="movie section-center">
-        <div className="back-btn">
-          <Link className="back-btn__link" to="/">
+    <main className="movie">
+      <div className="movie-left">
+        <div className="movie__img-container">
+          <img className="movie__img" src={Poster} alt={Title} />
+          <Link className="movie__back-btn" to="/">
             Back to Home
           </Link>
         </div>
-        <div className="movie-content">
-          <div className="movie-content__poster">
-            <img src={Poster} alt="" />
-          </div>
-          <div className="movie-content__text">
-            <h2 className="movie-content__title">{Title}</h2>
-            <div className="movie-content__info">
-              <p className="movie-content__genre bold-text">{Genre}</p>
-              <p className="movie-content__released bold-text">{Released}</p>
-            </div>
-            <p className="movie-content__director">
-              <span className="bold-text">Director: </span>
-              {Director}
-            </p>
-            <p className="movie-content__actors">
-              <span className="bold-text">Actors: </span> {Actors}
-            </p>
-            <p className="movie-content__plot">{Plot}</p>
-          </div>
+      </div>
+      <div className="movie-right">
+        <h1 className="movie__title">{Title}</h1>
+        <ul className="movie__info">
+          <li>{Released}</li>
+          <li>{Genre}</li>
+          <li>{Runtime}</li>
+          <li>{Rated}</li>
+        </ul>
+        <div className="movie__rating">
+          <img
+            className="movie__imdb"
+            src={process.env.PUBLIC_URL + "/imdb.svg"}
+            alt="IMDB"
+          />
+          <h4>
+            {imdbRating}
+            <sub>/10</sub>
+          </h4>
+        </div>
+        <div className="movie__overview">
+          <h5>overview</h5>
+          <p className="movie__plot">{Plot}</p>
+        </div>
+        <div className="movie__writer">
+          <h5>writers</h5>
+          <ul>
+            {Writer.split(",").map((writer, index) => {
+              return (
+                <li key={index}>
+                  <h6>{writer}</h6>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="movie__actor">
+          <h5>actors</h5>
+          <ul>
+            {Actors.split(",").map((actor, index) => {
+              return (
+                <li key={index}>
+                  <h6>{actor}</h6>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 
