@@ -7,6 +7,11 @@ const SearchForm = ({ setSearchParameter }) => {
   function handleSubmit(e) {
     e.preventDefault();
 
+    if (input === "") {
+      console.log("empty");
+      return;
+    }
+
     setSearchParameter(input);
     setInput("");
   }
