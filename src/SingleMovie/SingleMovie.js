@@ -34,7 +34,15 @@ const SingleMovie = () => {
     <main className="movie">
       <div className="movie-left">
         <div className="movie__img-container">
-          <img className="movie__img" src={Poster} alt={Title} />
+          <img
+            className="movie__img"
+            src={
+              Poster === "N/A"
+                ? `${process.env.PUBLIC_URL}/placeholder_img.png`
+                : Poster
+            }
+            alt={Title}
+          />
           <Link className="movie__back-btn" to="/">
             Back to Home
           </Link>

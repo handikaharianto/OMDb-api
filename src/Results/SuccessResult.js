@@ -9,7 +9,15 @@ const SuccessResult = ({ results }) => {
         return (
           <Link to={`/movie/${imdbID}`} key={imdbID} className="item">
             <div className="item__content">
-              <img className="item__img" src={Poster} alt={Title} />
+              <img
+                className="item__img"
+                src={
+                  Poster === "N/A"
+                    ? `${process.env.PUBLIC_URL}/placeholder_img.png`
+                    : Poster
+                }
+                alt={Title}
+              />
               <h4 className="item__title">{Title}</h4>
             </div>
           </Link>
