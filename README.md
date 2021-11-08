@@ -4,8 +4,10 @@
 
 ## Tech Used:
 
-1. React
+1. HTML
 2. CSS
+3. JavaScript
+4. React
 
 ## Main objectives of this project:
 
@@ -16,8 +18,3 @@
 ## API that I used:
 
 [OMDb API](http://www.omdbapi.com/)
-
-
-## Preview:
-![Movie Search Preview](https://github.com/handikaharianto/OMDb-api/blob/main/public/preview_omdb-api.png?raw=true "Preview")
-
