@@ -19,15 +19,20 @@ const SearchForm = ({ setSearchParameter }) => {
   return (
     <section className="section-search-form">
       <form className="search-form section-center" onSubmit={handleSubmit}>
-        <h1>search movies</h1>
-        <input
-          className="search-form__input"
-          type="text"
-          placeholder="Enter movie name..."
-          name="movie"
-          value={input}
-          onChange={handleInputChange}
-        />
+        <h1>Movie Search</h1>
+        <div className="search-form__input-container">
+          <input
+            className="search-form__input"
+            type="text"
+            placeholder="Enter movie name..."
+            name="movie"
+            value={input}
+            onChange={handleInputChange}
+          />
+          <button className="search-form__btn" type="submit">
+            Search
+          </button>
+        </div>
       </form>
     </section>
   );

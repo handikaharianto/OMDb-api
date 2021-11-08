@@ -1,5 +1,15 @@
 .section-search-form {
-  padding: 4em 0 2em;
+  padding: 2em 0;
+}
+
+.search-form h1 {
+  font-family: var(--ff-secondary);
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.search-form__input-container {
+  margin-top: 1.5em;
 }
 
 .search-form {
@@ -8,5 +18,23 @@
 
 .search-form__input {
   padding: 0.5em 1em;
+  border: 1px solid var(--clr-black);
+  border-radius: 5px;
   margin: 1.5em 0;
+}
+
+.search-form__input:focus {
+  outline: none;
+  border: 1px solid var(--clr-orange);
+}
+
+.search-form__btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.4em 2.5em;
+  border: transparent;
+  border-radius: 5px;
+  color: var(--clr-white);
+  background-color: var(--clr-orange);
+  font-family: var(--ff-primary);
 }
