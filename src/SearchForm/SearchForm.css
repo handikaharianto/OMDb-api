@@ -4,7 +4,7 @@
 
 .search-form h1 {
   font-family: var(--ff-secondary);
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 1.2;
 }
 
@@ -21,6 +21,7 @@
   border: 1px solid var(--clr-black);
   border-radius: 5px;
   margin: 1.5em 0;
+  font-size: 1.2rem;
 }
 
 .search-form__input:focus {
@@ -37,4 +38,5 @@
   color: var(--clr-white);
   background-color: var(--clr-orange);
   font-family: var(--ff-primary);
+  font-size: 1.2rem;
 }

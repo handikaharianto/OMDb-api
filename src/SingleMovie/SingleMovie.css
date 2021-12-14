@@ -12,7 +12,7 @@
 }
 
 .movie__img-container {
-  max-width: 300px;
+  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -27,13 +27,12 @@
   display: grid;
   place-items: center;
   width: 100%;
-  height: 2.7rem;
-  padding: 0.5em;
+  height: 3.5rem;
   border-radius: 10px;
   margin-top: 1em;
   color: var(--clr-white);
   background-color: var(--clr-orange);
-  font-size: 0.75rem;
+  text-align: center;
 }
 
 .movie-right {
@@ -43,6 +42,7 @@
 
 .movie__title {
   font-family: var(--ff-secondary);
+  font-size: 2.8rem;
   letter-spacing: 0.05em;
 }
 
@@ -50,20 +50,20 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em 1em;
-  margin-top: 0.7em;
+  margin-top: 1em;
 }
 
 .movie__info li {
   padding: 0.2em 0.5em;
   border-radius: 10px;
   background-color: var(--clr-cream-2);
-  font-size: 0.7rem;
 }
 
 .movie__rating {
   display: flex;
   gap: 1em;
-  margin-top: 0.7em;
+  margin-top: 1em;
+  font-size: 1.5rem;
 }
 
 .movie__imdb {
@@ -82,18 +82,14 @@
 }
 
 .movie__overview {
-  margin-top: 0.7em;
+  margin-top: 1em;
 }
 
 .movie__overview h5,
 .movie__writer h5,
 .movie__actor h5 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
-}
-
-.movie__plot {
-  font-size: 0.8rem;
 }
 
 .movie__writer,
@@ -117,6 +113,6 @@
 
 .movie__writer h6,
 .movie__actor h6 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
 }
